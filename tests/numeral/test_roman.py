@@ -16,15 +16,26 @@ def test_calling_funtions():
 @pytest.mark.parametrize(
     "arabic_num, roman_num",
     [
+        #base case
         (1, "I"),
         (5, "V"),
         
+        # addition case
+
         (2, "II"),
         (3, "III"),
         (6, "VI"),
         
+        # subtraction case
         (4,"IV"),
-        (9, "IX")
+        (9, "IX"),
+        (49, "XLIX"),
+        (99, "XCIX"),
+        
+        # mixed case
+        (42, "XLII"),
+        (24, "XXIV"),
+        (256, "CCLVI")
     ]
 )
 def test_to_roman(arabic_num, roman_num):
